@@ -15,8 +15,6 @@ username db 256 dup(0)
 index db 0          
 nameLength dd 0        
 buf1 db 256 dup(0)
-buf2 db 256 dup(0)
-buf3 db 256 dup(0)
 bufferIndex dd 0
 
 .code
@@ -93,5 +91,6 @@ loc_401126:
     jmp finish
 
 endpoint:
+	invoke StdIn, offset buf1, 32 ; Closes the window when Enter is pressed
 
 end start
