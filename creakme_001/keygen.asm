@@ -83,7 +83,6 @@ loc_401126:
     inc edx                            ; Increment DI (bufferIndex)
 
     mov bufferIndex, edx               ; Store updated DI back into bufferIndex
-    ;inc bufferIndex  ; Increment bufferIndex again to skip to next position
 
     pop eax
     cmp eax, nameLength
