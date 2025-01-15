@@ -1,3 +1,7 @@
+; fishing_with_dila_v0.5 by dila
+; Keygen by github/kenedii
+; Link to crackme: https://crackmes.one/crackme/5ab77f6433c5d40ad448cab4
+
 include \masm32\include\masm32rt.inc
 
 .data
@@ -10,20 +14,21 @@ newline db 13,10,0
 .code
 
 start:
- mov ebx, 3ADAFFCFh
+; Crackme checks that input = 3ADAFFCFh after algorithm, so we start with 3ADAFFCFh.
+ MOV ebx, 3ADAFFCFh        
  ROR EBX,10h
  XOR BX, 0DEAFh
- neg ebx
- sub bh, 20h 
+ NEG ebx
+ SUB bh, 20h 
 
  mov eax, ebx
  lea edi, string1
  call to_string
  
  Invoke StdOut, offset prompt
- Invoke StdOut, offset string1
+ Invoke StdOut, offset string1 ; print the correct registration key
  Invoke StdOut, offset newline
- Invoke StdIn, offset tempbuf1, 32
+ Invoke StdIn, offset tempbuf1, 32 ; wait for enter key to close program
 
 
 to_string PROC
