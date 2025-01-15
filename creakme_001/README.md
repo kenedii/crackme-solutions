@@ -1,6 +1,6 @@
 # creakme_001 by disip
 
-My attempt at building a keygen in MASM32 x86 Assembly for creakme_001 by disip.
+My keygen built in MASM32 x86 Assembly for creakme_001 by disip.
 
 Note: Username must be (3 >= letters <=5)
 
